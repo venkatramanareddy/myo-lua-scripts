@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <script src="myo.js">
+    <script>
+        Myo.connect('com.stolksdorf.myAwesomeApp', function(data, timestamp) {
+            console.log("Myo successfully connected. Data: " + JSON.stringify(data) + ". Timestamp: " + timestamp + ".");
+        });
+ 
+Myo.on('fist', function(){
+    console.log('Hello Myo!');
+    this.vibrate();
+});
+    </script>
+    <body>
+        Hi
+    </body>
+</html>
